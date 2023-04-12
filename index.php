@@ -58,8 +58,8 @@
             <div class="card">
   <div class="card-body">
     <h5 class="card-title">Zarejestruj się</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h6 class="card-subtitle mb-2 text-muted">Zarejestruj się do strony internetowej</h6>
+    <p class="card-text">Utwórz konto aby uzyskac wszystkie informacje o stronie.</p>
     <a href="signup.php" class="card-link">Zarejestruj się</a>
     
   </div>
@@ -69,9 +69,9 @@
             <div class="card">
   <div class="card-body">
     <h5 class="card-title">Zaloguj</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="singnup.php" class="card-link">Zaloguj</a>
+    <h6 class="card-subtitle mb-2 text-muted">Zaloguj sie do strony internetowej</h6>
+    <p class="card-text">Kiedy zalogujesz sie do strony będziesz mial dostęp do wszystkich informacji.</p>
+    <a href="signin.php" class="card-link">Zaloguj</a>
   </div>
 </div>
             </div>

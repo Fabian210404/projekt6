@@ -115,7 +115,7 @@ if(isset($_POST['submit'])){
 <!-- end - formularz -->
 <?php
 if($error[0] == "" &&  $error[1] == "" && $error[2] == "" && $error[3] == "" && $error[4] == "" && $error[5]) {
-    $conn = mysqli_connect('Admin','webPLA','webPLA','portal');
+    $conn = mysqli_connect('localhost','Adminn','123','portal');
     if(!$conn){
         echo 'Błąd połączenia z bazą danych. ERROR : '.mysqli_connect_error();
     }else{
