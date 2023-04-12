@@ -20,8 +20,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Strona główna</a>
-        <a class="nav-link" href="#">Kursy</a>
-        <a class="nav-link" href="#">Darmowe</a>
+        <a class="nav-link" href="signin.php">Log in</a>
+        <a class="nav-link" href="signup.php">Sign up</a>
         <a class="nav-link disabled">Kontakt</a>
       </div>
     </div>

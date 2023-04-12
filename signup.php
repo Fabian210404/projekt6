@@ -24,12 +24,8 @@ if(isset($_POST['submit'])){
      }
      $haslo = htmlspecialchars($_POST['haslo']);
      $phaslo = htmlspecialchars($_POST['phaslo']);
-     if (
-        !preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,20}$/', '$haslo') 
-        || !preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,20}$/', '$phaslo') 
-        || $haslo != $phaslo
-        ){
-         $error[4] ="Hasło musi posiadać min. 8 znaków i być identyczne." ;
+     {
+        
         //  1wwwdAw@dwaA!aa
         
                 if(!empty($_POST['regulamin'])) {
@@ -114,18 +110,25 @@ if(isset($_POST['submit'])){
 
 <!-- end - formularz -->
 <?php
-if($error[0] == "" &&  $error[1] == "" && $error[2] == "" && $error[3] == "" && $error[4] == "" && $error[5]) {
+if($error[0] == "" &&  $error[1] == "" && $error[2] == "" && $error[3] == "" && $error[4] == "" && $error[5] && isset($_POST['submit'])) {
     $conn = mysqli_connect('localhost','Adminn','123','portal');
     if(!$conn){
         echo 'Błąd połączenia z bazą danych. ERROR : '.mysqli_connect_error();
     }else{
         echo 'Połączono z bazą danych!';
-        echo $_POST['imie'];
-        echo $_POST['nazwisko'];
-        echo $_POST['login'];
-        echo $_POST['email'];
-        echo $_POST['haslo'];
-        echo $_POST['phaslo'];
+        // echo $_POST['imie'];
+        // echo $_POST['nazwisko'];
+        // echo $_POST['login'];
+        // echo $_POST['email'];
+        // echo $_POST['haslo'];
+        // echo $_POST['regulamin'];
+        $datadodania = date("Y.m.d");
+
+        $sql = "INSERT INTO users(imie, nazwisko, login, mail, haslo, regulamin, dataDodania)
+         VALUES ('$imie','$nazwisko','$login','$email','$haslo',true,'$datadodania')";
+
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
     }
 }
 
